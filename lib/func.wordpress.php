@@ -43,15 +43,13 @@ function gn_attribute_archive() {
 	function gn_add_masonry_att( $attributes ) {
 	        
 	    // add itemscope
-	    $attributes['data-masonry'] = '{ "itemSelector": ".entry", "columnWidth": 350 }';	    
+	    $attributes['data-masonry'] = '{ "itemSelector": ".entry" }';	    
 
 	    // return the attributes
 	    return $attributes;
 	        
 	}	
 }
-
-
 
 
 // ajoute le script sur l'accueil
@@ -66,9 +64,11 @@ function wp4masonry_appel_script() {
     jQuery(document).ready(function(){
 		jQuery('.content').masonry({
 		  // options
+		  fitWidth: true,
+		  columnWidth: '.grid-sizer',
+		  gutter: '.gutter-sizer'
 		  itemSelector: '.entry',
-		  columnWidth: 350
-		  isFitWidth: true
+		  percentPosition: true,
 		});
     });
   </script>
