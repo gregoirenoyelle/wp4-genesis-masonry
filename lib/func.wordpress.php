@@ -55,8 +55,8 @@ function gn_attribute_archive() {
 // ajoute le script sur l'accueil
 add_action( 'wp_footer', 'wp4masonry_appel_script', 9000 );
 function wp4masonry_appel_script() {
-	// Si ce n'est pas l'accueil, le script s'arrête
-	if ( ! is_home() ) {
+	// Si ce n'est pas une archive le script s'arrête
+	if ( ! is_archive() ) {
 		return;
 	}
 ?>	
