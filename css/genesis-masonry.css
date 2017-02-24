@@ -2,6 +2,22 @@
   margin: 0 auto;
 }
 
-.archive .entry {
-  width: 320px;
+.archive .content:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.archive .content .entry,
+.archive .content .grid-sizer {
+  width: 33%;
+}
+
+.archive .content .gutter-sizer {
+	width: 10%;
+}
+
+.archive .content .entry {
+	border: 1px solid #888;
+	padding: 20px;
 }
